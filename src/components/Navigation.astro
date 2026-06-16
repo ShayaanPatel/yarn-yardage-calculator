@@ -1,0 +1,66 @@
+<nav class="bg-[var(--color-bg-card)] border-b border-[var(--color-border)] no-print">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 text-lg font-semibold text-[var(--color-text)] hover:text-[var(--color-accent)] transition">
+        <span class="text-2xl">🧶</span>
+        <span class="font-outfit">Yarn Yardage</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden sm:flex items-center gap-6">
+        <a href="/" class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition">Calculator</a>
+        <a href="/faq" class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition">FAQ</a>
+        <a href="/about" class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition">About</a>
+        <a href="/blog" class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition">Blog</a>
+        <button id="dark-mode-toggle" class="p-2 rounded-lg hover:bg-[var(--color-bg-sidebar)] transition" aria-label="Toggle dark mode">
+          <span class="dark:hidden">🌙</span>
+          <span class="hidden dark:inline">☀️</span>
+        </button>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <div class="sm:hidden flex items-center gap-2">
+        <button id="dark-mode-toggle-mobile" class="p-2 rounded-lg hover:bg-[var(--color-bg-sidebar)] transition" aria-label="Toggle dark mode">
+          <span class="dark:hidden">🌙</span>
+          <span class="hidden dark:inline">☀️</span>
+        </button>
+        <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-[var(--color-bg-sidebar)] transition" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden sm:hidden pb-4 space-y-2">
+      <a href="/" class="block px-3 py-2 text-sm rounded-lg hover:bg-[var(--color-bg-sidebar)]">Calculator</a>
+      <a href="/faq" class="block px-3 py-2 text-sm rounded-lg hover:bg-[var(--color-bg-sidebar)]">FAQ</a>
+      <a href="/about" class="block px-3 py-2 text-sm rounded-lg hover:bg-[var(--color-bg-sidebar)]">About</a>
+      <a href="/blog" class="block px-3 py-2 text-sm rounded-lg hover:bg-[var(--color-bg-sidebar)]">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Sync dark mode toggles
+  const toggleDesktop = document.getElementById('dark-mode-toggle');
+  const toggleMobile = document.getElementById('dark-mode-toggle-mobile');
+  if (toggleDesktop && toggleMobile) {
+    const toggle = () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('yarn-yardage-theme', isDark ? 'dark' : 'light');
+    };
+    toggleDesktop.addEventListener('click', toggle);
+    toggleMobile.addEventListener('click', toggle);
+  }
+</script>

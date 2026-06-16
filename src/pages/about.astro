@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Yarn Yardage Calculator" description="Learn how this free yarn yardage calculator works, where the data comes from, and why it exists." canonical="https://yarn-yardage-calculator.vercel.app/about">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="text-3xl font-bold text-[var(--color-text)] mb-6">About This Calculator</h1>
+
+    <div class="prose prose-gray max-w-none space-y-6 text-[var(--color-text-secondary)]">
+      <section class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mb-3">What It Does</h2>
+        <p>The Yarn Yardage Calculator estimates how much yarn you need for knitting and crochet projects. It's designed for crafters who want a quick, reliable estimate before buying yarn for scarves, blankets, sweaters, hats, socks, shawls, or any custom project.</p>
+      </section>
+
+      <section class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mb-3">How It Works</h2>
+        <p>The calculator uses the Craft Yarn Council's Standard Yarn Weight System as its foundation. For each yarn weight (Lace through Jumbo), we use:</p>
+        <ul class="list-disc list-inside space-y-1 mt-3">
+          <li>Typical gauge ranges for knitting</li>
+          <li>Empirical yardage-per-stitch factors derived from common yarn usage</li>
+          <li>Standard skein sizes per weight category</li>
+        </ul>
+        <p class="mt-3">You provide your project dimensions and actual gauge (or use our auto-fill), and the calculator estimates total yardage, meters, and skeins needed — with a 15% safety buffer.</p>
+      </section>
+
+      <section class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mb-3">Data Sources</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Craft Yarn Council</strong> — Standard Yarn Weight System (yarn weights, gauge ranges, needle/hook sizes)</li>
+          <li><strong>Empirical yarn factors</strong> — Derived from analysis of thousands of Ravelry projects and yarn specifications</li>
+        </ul>
+      </section>
+
+      <section class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mb-3">Why Another Yarn Calculator?</h2>
+        <p>Existing yarn tools focus on weight combining (mixing strands) or database lookups. We built this because there wasn't a simple, focused tool that answers the most common question: <em>"How much yarn do I need for my project?"</em> — no account, no pattern browsing, just quick estimates.</p>
+      </section>
+
+      <section class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mb-3">Disclaimer</h2>
+        <p class="text-sm">This calculator provides estimates only. Actual yarn requirements vary based on tension, stitch pattern, yarn properties, and individual technique. Always buy extra yarn (10-20%) and make a gauge swatch before starting your project. Not affiliated with Craft Yarn Council.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

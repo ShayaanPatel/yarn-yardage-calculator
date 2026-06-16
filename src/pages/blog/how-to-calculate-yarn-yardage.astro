@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="How to Calculate Yarn Yardage for Any Project — Yarn Yardage Calculator" description="Complete guide to calculating yarn yardage for knitting and crochet projects. Learn the formula, see examples, and get tips for accurate estimates." canonical="https://yarn-yardage-calculator.vercel.app/blog/how-to-calculate-yarn-yardage">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <article>
+      <time class="text-sm text-[var(--color-text-secondary)]">June 16, 2026</time>
+      <h1 class="text-3xl font-bold text-[var(--color-text)] mt-2 mb-6">How to Calculate Yarn Yardage for Any Project</h1>
+
+      <div class="text-[var(--color-text-secondary)] space-y-6 leading-relaxed">
+        <p class="text-lg text-[var(--color-text)] font-medium">Whether you're knitting a scarf or crocheting a blanket, one question always comes up: <em>how much yarn do I need?</em></p>
+
+        <p>Running out of yarn mid-project is frustrating. Buying too much is wasteful. Here's how to calculate yarn yardage accurately so you buy just the right amount.</p>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">The Yardage Formula</h2>
+        <p>At its core, yarn yardage calculation is simple arithmetic:</p>
+        <div class="bg-[var(--color-bg-sidebar)] rounded-lg p-4 font-mono text-sm">
+          Yardage = (Width × Stitch Gauge) × (Height × Row Gauge) × Yardage per Stitch × 1.15
+        </div>
+        <p>Where:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>Width × Height</strong> = your project dimensions (in inches or cm)</li>
+          <li><strong>Stitch Gauge</strong> = stitches per inch from your swatch</li>
+          <li><strong>Row Gauge</strong> = rows per inch from your swatch</li>
+          <li><strong>Yardage per Stitch</strong> = varies by yarn weight (see below)</li>
+          <li><strong>1.15</strong> = 15% safety buffer for weaving ends, tension variation, etc.</li>
+        </ul>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">Step 1: Knit a Gauge Swatch</h2>
+        <p>Your gauge swatch is the most important step. Without it, any yardage estimate is a rough guess.</p>
+        <ol class="list-decimal list-inside space-y-2">
+          <li>Knit a 4" × 4" (10 cm × 10 cm) square using your chosen yarn, needles/hook, and stitch pattern</li>
+          <li>Block the swatch the same way you'll block the finished project</li>
+          <li>Count stitches horizontally across the center 4"</li>
+          <li>Count rows vertically across the center 4"</li>
+        </ol>
+
+        <div class="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 mt-4">
+          <p class="font-medium text-[var(--color-text)]">💡 Pro Tip</p>
+          <p class="text-sm mt-1">If you're using a pattern, check the recommended gauge. Matching it ensures your project will be the right size and use the expected yardage.</p>
+        </div>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">Step 2: Measure Your Project</h2>
+        <p>Decide the finished dimensions of your project. Common sizes:</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-[var(--color-bg-sidebar)]">
+                <th class="text-left p-3 border border-[var(--color-border)]">Project</th>
+                <th class="text-left p-3 border border-[var(--color-border)]">Typical Size</th>
+                <th class="text-left p-3 border border-[var(--color-border)]">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border border-[var(--color-border)]">Scarf</td><td class="p-3 border border-[var(--color-border)]">8" × 60"</td><td class="p-3 border border-[var(--color-border)]">Standard length</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Throw Blanket</td><td class="p-3 border border-[var(--color-border)]">50" × 60"</td><td class="p-3 border border-[var(--color-border)]">Couch size</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Hat (Beanie)</td><td class="p-3 border border-[var(--color-border)]">20" circ × 8"</td><td class="p-3 border border-[var(--color-border)]">Adult medium</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Sweater</td><td class="p-3 border border-[var(--color-border)]">40" chest × 26"</td><td class="p-3 border border-[var(--color-border)]">Adult medium, includes sleeves</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Baby Blanket</td><td class="p-3 border border-[var(--color-border)]">36" × 36"</td><td class="p-3 border border-[var(--color-border)]">Receiving blanket</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">Step 3: Apply Yardage Factors</h2>
+        <p>Each yarn weight has a different yardage-per-stitch factor. These are empirical estimates based on typical yarn usage:</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-[var(--color-bg-sidebar)]">
+                <th class="text-left p-3 border border-[var(--color-border)]">Yarn Weight</th>
+                <th class="text-left p-3 border border-[var(--color-border)]">Factor (yds/stitch)</th>
+                <th class="text-left p-3 border border-[var(--color-border)]">Typical Gauge (sts/4")</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border border-[var(--color-border)]">Lace (0)</td><td class="p-3 border border-[var(--color-border)]">0.035</td><td class="p-3 border border-[var(--color-border)]">33–40</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Fingering (1)</td><td class="p-3 border border-[var(--color-border)]">0.040</td><td class="p-3 border border-[var(--color-border)]">27–32</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Sport (2)</td><td class="p-3 border border-[var(--color-border)]">0.045</td><td class="p-3 border border-[var(--color-border)]">23–26</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">DK (3)</td><td class="p-3 border border-[var(--color-border)]">0.050</td><td class="p-3 border border-[var(--color-border)]">21–24</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Worsted (4)</td><td class="p-3 border border-[var(--color-border)]">0.055</td><td class="p-3 border border-[var(--color-border)]">16–20</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Bulky (5)</td><td class="p-3 border border-[var(--color-border)]">0.065</td><td class="p-3 border border-[var(--color-border)]">12–15</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Super Bulky (6)</td><td class="p-3 border border-[var(--color-border)]">0.080</td><td class="p-3 border border-[var(--color-border)]">7–11</td></tr>
+              <tr><td class="p-3 border border-[var(--color-border)]">Jumbo (7)</td><td class="p-3 border border-[var(--color-border)]">0.100</td><td class="p-3 border border-[var(--color-border)]">≤6</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">Example Calculation</h2>
+        <p>Let's work through an example: <strong>Worsted weight scarf, 8" × 60", gauge 18 sts × 24 rows per 4"</strong></p>
+        <div class="bg-[var(--color-bg-sidebar)] rounded-lg p-4 font-mono text-sm space-y-1">
+          <p>Stitches per inch: 18 ÷ 4 = 4.5</p>
+          <p>Rows per inch: 24 ÷ 4 = 6</p>
+          <p>Total stitches: (8 × 4.5) × (60 × 6) = 36 × 360 = 12,960 stitches</p>
+          <p>Yardage: 12,960 × 0.055 × 1.15 = <strong>~820 yards</strong></p>
+          <p>Skeins (at 220 yds each): 820 ÷ 220 = <strong>~4 skeins</strong></p>
+        </div>
+
+        <h2 class="text-xl font-semibold text-[var(--color-text)] mt-8 mb-4">Tips for Accuracy</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Always make a swatch</strong> — gauge varies by tension, yarn, and stitch pattern</li>
+          <li><strong>Buy 10-20% extra</strong> — dye lots vary and you don't want to run short</li>
+          <li><strong>Check your yarn label</strong> — most yarns list yardage per skein on the label</li>
+          <li><strong>Stitch patterns matter</strong> — cables and lace use more yarn than stockinette</li>
+          <li><strong>Crochet uses more yarn</strong> than knitting for the same project (approximately 25-30% more)</li>
+          <li><strong>Save your calculations</strong> — our calculator stores them locally so you can compare</li>
+        </ul>
+
+        <div class="bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/30 rounded-xl p-6 mt-8">
+          <h3 class="text-lg font-semibold text-[var(--color-text)] mb-2">🧮 Try Our Calculator</h3>
+          <p class="text-sm mb-4">Skip the manual math. Use our free yarn yardage calculator — select your yarn weight, enter dimensions and gauge, and get instant results.</p>
+          <a href="/" class="inline-block px-6 py-3 bg-[var(--color-cta)] text-white rounded-xl hover:bg-[var(--color-cta-hover)] transition font-medium">Calculate Yarn Now →</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

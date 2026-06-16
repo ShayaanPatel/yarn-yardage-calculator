@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ── Warm Yarn Color Palette ── */
+:root {
+  --color-cream: #FFF8F0;
+  --color-sage: #7C9A82;
+  --color-sage-light: #A8C4AD;
+  --color-sage-dark: #5D7A63;
+  --color-terracotta: #C4604F;
+  --color-terracotta-light: #D98A7A;
+  --color-terracotta-dark: #A44A3C;
+  --color-navy: #2C3E50;
+  --color-navy-light: #3D566E;
+  --color-warm-gray: #6B7280;
+  --color-warm-gray-light: #9CA3AF;
+  --color-bg: #FFF8F0;
+  --color-bg-card: #FFFFFF;
+  --color-bg-sidebar: #F5F0EB;
+  --color-text: #2C3E50;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5DED5;
+  --color-accent: #7C9A82;
+  --color-accent-hover: #5D7A63;
+  --color-cta: #C4604F;
+  --color-cta-hover: #A44A3C;
+}
+
+/* ── Dark Mode ── */
+html.dark {
+  --color-bg: #1A1D23;
+  --color-bg-card: #252830;
+  --color-bg-sidebar: #2A2D35;
+  --color-text: #E8E6E0;
+  --color-text-secondary: #9CA3AF;
+  --color-border: #3A3D45;
+  --color-accent: #A8C4AD;
+  --color-accent-hover: #7C9A82;
+  --color-cta: #D98A7A;
+  --color-cta-hover: #C4604F;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* ── Print Styles ── */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; font-size: 12pt; }
+  .print-only { display: block !important; }
+}
+
+/* ── Calculator Step Transitions ── */
+.calc-step {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.calc-step-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.calc-step-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Gauge Swatch Grid ── */
+.gauge-swatch {
+  display: grid;
+  gap: 2px;
+  background: var(--color-border);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.gauge-stitch {
+  aspect-ratio: 1;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+/* ── Result Number Emphasis ── */
+.result-number {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-cta);
+}

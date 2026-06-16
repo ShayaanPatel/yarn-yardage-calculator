@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdUnit from '../components/AdUnit.astro';
+---
+
+<BaseLayout>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <!-- Hero -->
+    <div class="text-center mb-10">
+      <div class="text-5xl mb-4">🧶</div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-[var(--color-text)] mb-3">
+        How Much Yarn Do I Need?
+      </h1>
+      <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+        Free yarn yardage calculator for knitting and crochet projects. 
+        Estimate yarn requirements for scarves, blankets, sweaters, hats, and more.
+        Based on Craft Yarn Council standards.
+      </p>
+    </div>
+
+    <!-- Calculator Form -->
+    <div id="calculator-form" class="bg-[var(--color-bg-card)] rounded-xl shadow-sm border border-[var(--color-border)] p-6 sm:p-8 mb-8">
+      <!-- Step 1: Yarn Weight -->
+      <section class="calc-step mb-8">
+        <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">1. Choose Your Yarn Weight</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="yarn-weight" class="block text-sm font-medium text-[var(--color-text)] mb-2">Yarn Weight</label>
+            <select id="yarn-weight" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]">
+            </select>
+          </div>
+          <div id="weight-info" class="bg-[var(--color-bg-sidebar)] rounded-lg p-4 text-sm">
+            <p class="text-[var(--color-text-secondary)] italic">Select a yarn weight to see details.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Project Type -->
+      <section class="calc-step mb-8">
+        <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">2. What Are You Making?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="project-type" class="block text-sm font-medium text-[var(--color-text)] mb-2">Project Type</label>
+            <select id="project-type" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]">
+            </select>
+          </div>
+          <div>
+            <label for="unit-toggle" class="block text-sm font-medium text-[var(--color-text)] mb-2">Units</label>
+            <select id="unit-toggle" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]">
+              <option value="inches">Inches</option>
+              <option value="cm">Centimeters</option>
+            </select>
+          </div>
+        </div>
+        <p id="project-note" class="mt-2 text-sm text-[var(--color-text-secondary)] italic"></p>
+      </section>
+
+      <!-- Step 3: Dimensions -->
+      <section class="calc-step mb-8">
+        <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">3. Enter Dimensions</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="project-width" class="block text-sm font-medium text-[var(--color-text)] mb-2">Width</label>
+            <div class="relative">
+              <input id="project-width" type="number" step="0.5" min="1" max="200" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-[var(--color-text-secondary)]">in</span>
+            </div>
+          </div>
+          <div>
+            <label for="project-height" class="block text-sm font-medium text-[var(--color-text)] mb-2">Height / Length</label>
+            <div class="relative">
+              <input id="project-height" type="number" step="0.5" min="1" max="200" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]" />
+              <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-[var(--color-text-secondary)]">in</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 4: Gauge -->
+      <section class="calc-step mb-8">
+        <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">4. Your Gauge (per 4")</h2>
+        <p class="text-sm text-[var(--color-text-secondary)] mb-4">Auto-filled from yarn weight. Adjust to match your actual swatch.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="gauge-stitches" class="block text-sm font-medium text-[var(--color-text)] mb-2">Stitches per 4"</label>
+            <input id="gauge-stitches" type="number" step="0.5" min="1" max="60" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]" />
+          </div>
+          <div>
+            <label for="gauge-rows" class="block text-sm font-medium text-[var(--color-text)] mb-2">Rows per 4"</label>
+            <input id="gauge-rows" type="number" step="0.5" min="1" max="60" class="w-full p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 5: Skein Size (Optional) -->
+      <section class="calc-step mb-8">
+        <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">5. Skein Size (Optional)</h2>
+        <div>
+          <label for="skein-yardage" class="block text-sm font-medium text-[var(--color-text)] mb-2">Yards per Skein <span class="text-[var(--color-text-secondary)]">(leave blank for auto-estimate)</span></label>
+          <input id="skein-yardage" type="number" step="10" min="0" max="2000" class="w-full max-w-xs p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] text-[var(--color-text)]" placeholder="e.g., 220" />
+        </div>
+      </section>
+
+      <!-- Calculate Button -->
+      <button id="calculate-btn" class="w-full sm:w-auto px-8 py-4 bg-[var(--color-cta)] text-white font-semibold rounded-xl hover:bg-[var(--color-cta-hover)] transition text-lg shadow-sm">
+        🧮 Calculate Yarn Needed
+      </button>
+    </div>
+
+    <!-- Results Area -->
+    <div id="calculator-results" class="mb-8"></div>
+
+    <!-- Ad placement -->
+    <AdUnit slot="calculator-bottom" format="responsive" />
+
+    <!-- Saved History -->
+    <div id="project-history" class="bg-[var(--color-bg-card)] rounded-xl shadow-sm border border-[var(--color-border)] p-6 sm:p-8">
+      <h2 class="text-lg font-semibold text-[var(--color-text)] mb-4">📋 Saved Calculations</h2>
+      <div id="project-history-list">
+        <p class="text-sm text-[var(--color-text-secondary)] italic">No saved calculations yet.</p>
+      </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-[var(--color-bg-card)] rounded-xl p-5 border border-[var(--color-border)]">
+        <div class="text-2xl mb-2">🧵</div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-2">All Yarn Weights</h3>
+        <p class="text-sm text-[var(--color-text-secondary)]">Lace to Jumbo — all 8 Craft Yarn Council weight categories supported.</p>
+      </div>
+      <div class="bg-[var(--color-bg-card)] rounded-xl p-5 border border-[var(--color-border)]">
+        <div class="text-2xl mb-2">🧣</div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-2">8 Project Types</h3>
+        <p class="text-sm text-[var(--color-text-secondary)]">Scarves, blankets, hats, socks, sweaters, shawls, cardigans, or custom.</p>
+      </div>
+      <div class="bg-[var(--color-bg-card)] rounded-xl p-5 border border-[var(--color-border)]">
+        <div class="text-2xl mb-2">📐</div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-2">Your Gauge Matters</h3>
+        <p class="text-sm text-[var(--color-text-secondary)]">Enter your actual gauge for accurate yardage. Auto-filled from yarn weight standards.</p>
+      </div>
+      <div class="bg-[var(--color-bg-card)] rounded-xl p-5 border border-[var(--color-border)]">
+        <div class="text-2xl mb-2">💾</div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-2">Save & Compare</h3>
+        <p class="text-sm text-[var(--color-text-secondary)]">Save calculations locally and compare different yarn weights for the same project.</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

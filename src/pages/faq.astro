@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="FAQ — Yarn Yardage Calculator" description="Frequently asked questions about yarn yardage calculation, knitting gauge, and how to estimate yarn needed for your projects." canonical="https://yarn-yardage-calculator.vercel.app/faq">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="text-3xl font-bold text-[var(--color-text)] mb-8">Frequently Asked Questions</h1>
+
+    <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">How much yarn do I need for a blanket?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)] space-y-2">
+            <p>A throw blanket (50" × 60") typically requires:</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li><strong>Worsted (Medium):</strong> 1,800–2,200 yards (8–10 skeins)</li>
+              <li><strong>Bulky:</strong> 1,200–1,600 yards (7–10 skeins)</li>
+              <li><strong>Super Bulky:</strong> 800–1,100 yards (7–10 skeins)</li>
+            </ul>
+            <p>Use our calculator above with "Blanket" selected for exact results based on your gauge.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">How do I calculate yarn yardage?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)] space-y-2">
+            <p>The formula is: <strong>Yardage = (Width in inches × stitches per inch) × (Length in inches × rows per inch) × yardage per stitch</strong></p>
+            <p>Step by step:</p>
+            <ol class="list-decimal list-inside space-y-1">
+              <li>Knit a 4" × 4" gauge swatch</li>
+              <li>Count stitches and rows per 4 inches</li>
+              <li>Measure your project dimensions (width × length)</li>
+              <li>Calculate total stitch count: (width × stitch gauge) × (length × row gauge)</li>
+              <li>Multiply by yardage per stitch (varies by yarn weight)</li>
+              <li>Add 15% buffer for safety</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">What is gauge in knitting?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)] space-y-2">
+            <p>Gauge is the number of stitches and rows per inch (or per 4 inches) in your knitting. It determines the size and density of your fabric. Most patterns specify a gauge, usually measured over 4 inches.</p>
+            <p><strong>Why it matters:</strong> If your gauge differs from the pattern's gauge, your finished project will be a different size and may use more or less yarn than estimated.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">How many skeins do I need?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)]">
+            <p>Divide the total yardage needed by the yardage per skein, then round up. Our calculator does this automatically and lets you customize the skein size.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">Can I substitute a different yarn weight?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)] space-y-2">
+            <p>Yes, but it will change your yardage requirements. Substituting a lighter yarn means you'll need more yardage; substituting a heavier yarn means less. Use multiple strands to approximate a heavier weight — for example, holding 2 strands of fingering weight together roughly equals worsted weight. Always knit a gauge swatch when substituting.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">How accurate is this calculator?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)] space-y-2">
+            <p>The calculator provides a good starting estimate based on Craft Yarn Council standards and empirical yardage factors. For best accuracy, enter your actual gauge from a swatch and always buy 10-20% extra yarn. Individual tension, stitch patterns (cables, lace), and yarn properties affect actual usage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">What's the difference between yards and meters?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)]">
+            <p>1 yard = 0.9144 meters. Yarn labels commonly use either unit depending on the manufacturer. The calculator shows both values so you can compare regardless of how your yarn is labeled.</p>
+          </div>
+        </div>
+      </div>
+
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="bg-[var(--color-bg-card)] rounded-xl p-6 border border-[var(--color-border)]">
+        <h2 itemprop="name" class="text-lg font-semibold text-[var(--color-text)] mb-3">Is this calculator free?</h2>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text" class="text-[var(--color-text-secondary)]">
+            <p>Yes, completely free. No account, no login, no hidden fees. We may display ads to cover hosting costs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

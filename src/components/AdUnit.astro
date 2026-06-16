@@ -1,0 +1,29 @@
+---
+export interface Props {
+  slot?: string;
+  format?: 'horizontal' | 'rectangle' | 'responsive';
+}
+
+const { slot = 'placeholder', format = 'responsive' } = Astro.props;
+const sizeClasses = {
+  horizontal: 'w-full h-[90px]',
+  rectangle: 'w-full h-[250px]',
+  responsive: 'w-full min-h-[90px] md:min-h-[250px]',
+};
+---
+
+<div class={`adsense-container my-6 ${sizeClasses[format]} bg-[var(--color-bg-sidebar)] rounded-lg flex items-center justify-center overflow-hidden no-print`}>
+  <div class="text-center text-xs text-[var(--color-text-secondary)] p-4">
+    <p class="mb-1">📢 Ad Space</p>
+    <p>Replace with AdSense code when approved</p>
+    <!--
+      When AdSense is approved, replace this div with:
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="{slot}"
+           data-ad-format="{format === 'responsive' ? 'auto' : format}"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</div>

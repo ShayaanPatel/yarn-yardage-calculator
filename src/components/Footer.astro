@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="bg-[var(--color-bg-card)] border-t border-[var(--color-border)] mt-12 no-print">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-3">Yarn Yardage Calculator</h3>
+        <p class="text-[var(--color-text-secondary)]">
+          Free tool for knitters and crocheters to estimate yarn requirements for any project.
+          Based on Craft Yarn Council standards.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-[var(--color-text-secondary)]">
+          <li><a href="/" class="hover:text-[var(--color-accent)] transition">Calculator</a></li>
+          <li><a href="/faq" class="hover:text-[var(--color-accent)] transition">FAQ</a></li>
+          <li><a href="/about" class="hover:text-[var(--color-accent)] transition">About</a></li>
+          <li><a href="/blog" class="hover:text-[var(--color-accent)] transition">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-[var(--color-text)] mb-3">Popular Projects</h3>
+        <ul class="space-y-2 text-[var(--color-text-secondary)]">
+          <li><a href="/" class="hover:text-[var(--color-accent)] transition">Yarn for a Blanket</a></li>
+          <li><a href="/" class="hover:text-[var(--color-accent)] transition">Yarn for a Scarf</a></li>
+          <li><a href="/" class="hover:text-[var(--color-accent)] transition">Yarn for a Sweater</a></li>
+          <li><a href="/" class="hover:text-[var(--color-accent)] transition">Yarn for a Hat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t border-[var(--color-border)] text-center text-xs text-[var(--color-text-secondary)]">
+      <p>&copy; {year} Yarn Yardage Calculator. Not affiliated with Craft Yarn Council.</p>
+      <p class="mt-1">Happy knitting!</p>
+    </div>
+  </div>
+</footer>
