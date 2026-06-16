@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C3E50"/>
+      <stop offset="100%" stop-color="#1a252f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C9A82"/>
+      <stop offset="100%" stop-color="#5D7A63"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="400" fill="#7C9A82" opacity="0.08"/>
+  <circle cx="1100" cy="530" r="300" fill="#C4604F" opacity="0.06"/>
+  <text x="600" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#FFF8F0">Yarn Yardage</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#FFF8F0">Calculator</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#A8C4AD">How Much Yarn Do I Need?</text>
+  <rect x="420" y="420" width="360" height="4" rx="2" fill="url(#accent)"/>
+  <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6B7280">Free knitting &amp; crochet yardage calculator</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4B5563">Based on Craft Yarn Council Standards</text>
+  <text x="1100" y="600" text-anchor="end" font-family="Arial, sans-serif" font-size="20" fill="#FFF8F0">🧶</text>
+</svg>

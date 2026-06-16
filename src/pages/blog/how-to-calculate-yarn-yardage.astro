@@ -4,9 +4,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout title="How to Calculate Yarn Yardage for Any Project — Yarn Yardage Calculator" description="Complete guide to calculating yarn yardage for knitting and crochet projects. Learn the formula, see examples, and get tips for accurate estimates." canonical="https://yarn-yardage-calculator.vercel.app/blog/how-to-calculate-yarn-yardage">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+
+    <!-- Breadcrumb JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yarn-yardage-calculator.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yarn-yardage-calculator.vercel.app/blog" },
+        { "@type": "ListItem", "position": 3, "name": "How to Calculate Yarn Yardage", "item": "https://yarn-yardage-calculator.vercel.app/blog/how-to-calculate-yarn-yardage" }
+      ]
+    })} />
+
+    <!-- Article JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Calculate Yarn Yardage for Any Project",
+      "description": "Complete guide to calculating yarn yardage for knitting and crochet projects. Learn the formula, see examples, and get tips for accurate estimates.",
+      "datePublished": "2026-06-16",
+      "dateModified": "2026-06-16",
+      "author": { "@type": "Organization", "name": "Yarn Yardage Calculator" },
+      "publisher": { "@type": "Organization", "name": "Yarn Yardage Calculator" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://yarn-yardage-calculator.vercel.app/blog/how-to-calculate-yarn-yardage" }
+    })} />
+
     <article>
-      <time class="text-sm text-[var(--color-text-secondary)]">June 16, 2026</time>
-      <h1 class="text-3xl font-bold text-[var(--color-text)] mt-2 mb-6">How to Calculate Yarn Yardage for Any Project</h1>
+      <header>
+        <time class="text-sm text-[var(--color-text-secondary)]">June 16, 2026</time>
+        <h1 class="text-3xl font-bold text-[var(--color-text)] mt-2 mb-6">How to Calculate Yarn Yardage for Any Project</h1>
+      </header>
 
       <div class="text-[var(--color-text-secondary)] space-y-6 leading-relaxed">
         <p class="text-lg text-[var(--color-text)] font-medium">Whether you're knitting a scarf or crocheting a blanket, one question always comes up: <em>how much yarn do I need?</em></p>

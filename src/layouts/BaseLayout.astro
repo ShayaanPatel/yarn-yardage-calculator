@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import '../scripts/darkMode';
-import '../scripts/calculator';
 import SEOHead from '../components/SEOHead.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
@@ -43,10 +41,10 @@ const pageCanonical = canonical || 'https://yarn-yardage-calculator.vercel.app';
     <!-- AdSense placeholder (insert your AdSense code here when approved) -->
     <div id="adsense-placeholder" class="no-print" aria-hidden="true"></div>
 
-    <!-- Vercel Analytics -->
-    <script>
-      // Vercel Analytics loads automatically via @vercel/analytics
-      // when deployed via Vercel adapter with webAnalytics enabled
-    </script>
+    <!-- Vercel Analytics automatically via @astrojs/vercel adapter -->
+
+    <!-- Scripts -->
+    <script src="../scripts/darkMode.ts"></script>
+    <script src="../scripts/calculator.ts"></script>
   </body>
 </html>

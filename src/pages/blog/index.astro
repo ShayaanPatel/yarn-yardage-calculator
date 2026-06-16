@@ -4,6 +4,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout title="Blog — Yarn Yardage Calculator" description="Tips and guides for calculating yarn yardage for your knitting and crochet projects." canonical="https://yarn-yardage-calculator.vercel.app/blog">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+
+    <!-- Breadcrumb JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yarn-yardage-calculator.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://yarn-yardage-calculator.vercel.app/blog" }
+      ]
+    })} />
+
     <h1 class="text-3xl font-bold text-[var(--color-text)] mb-8">Yarn Yardage Blog</h1>
     <p class="text-[var(--color-text-secondary)] mb-8">Tips, guides, and resources for estimating yarn yardage and planning your projects.</p>
 
